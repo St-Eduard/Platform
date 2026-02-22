@@ -37,7 +37,15 @@ DB_PASSWORD=
 SESSION_DRIVER=file
 
 4. S3 хранилище
-В процессе пока не до конца понял как оно работает и как правильно все настроить
+FILESYSTEM_DISK=s3
+AWS_ACCESS_KEY_ID=L9IOBCEF0DVY5VPQNBOH
+AWS_SECRET_ACCESS_KEY=B8M304AkKBaxDFVEIdU1xo0KYDRsd6VCaB0hjToZ
+AWS_DEFAULT_REGION=ru-1
+AWS_BUCKET=108441407d0b-college
+AWS_ENDPOINT=https://s3.ru1.storage.beget.cloud
+AWS_URL=https://108441407d0b-college.s3.ru1.storage.beget.cloud
+AWS_USE_PATH_STYLE_ENDPOINT=true
+
 5. Запустить миграции и сиды
 bash
 php artisan migrate
