@@ -20,12 +20,8 @@ composer install
 npm install
 npm run build
 
-2. Настройка окружения
-bash
-cp .env.example .env
-php artisan key:generate
 
-3. Настройка базы данных (в файле .env)
+2. Настройка базы данных (в файле .env)
 text
 B_CONNECTION=mysql
 DB_HOST=MySql-8.0
@@ -36,7 +32,7 @@ DB_PASSWORD=
 
 SESSION_DRIVER=file
 
-4. S3 хранилище
+3. S3 хранилище
 FILESYSTEM_DISK=s3
 AWS_ACCESS_KEY_ID= _____
 AWS_SECRET_ACCESS_KEY= ____
@@ -46,16 +42,15 @@ AWS_ENDPOINT=https://s3.ru1.storage.beget.cloud
 AWS_URL=https://108441407d0b-college.s3.ru1.storage.beget.cloud
 AWS_USE_PATH_STYLE_ENDPOINT=true
 
-5. Запустить миграции и сиды
+4. Запустить миграции
 bash
 php artisan migrate
-php artisan db:seed
 
-6. Запустить очередь (в отдельном окне)
+5. Запустить очередь
 bash
 php artisan queue:work
 
-7. Запустить сервер
+6. Запустить сервер
 bash
 php artisan serve
 
